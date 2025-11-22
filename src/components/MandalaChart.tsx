@@ -110,7 +110,7 @@ export const MandalaChart = () => {
     return (
         <div className="mandala-container">
             <div className="mandala-header">
-                <h1 className="mandala-title">HARADA METHOD</h1>
+                <h1 className="mandala-title">HARADA <span className="mandala-title-span">METHOD</span></h1>
                 <div className="mode-toggle">
                     <button
                         className={`toggle-btn ${mode === 'example' ? 'active' : ''}`}
