@@ -1,0 +1,160 @@
+/* src/components/MandalaChart.css */
+
+.mandala-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+.mandala-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mandala-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.mandala-subtitle {
+  color: #888;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 0.5rem;
+}
+
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
+@media (min-width: 768px) {
+  .charts-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
+
+.chart-section {
+  transition: all 0.5s ease;
+}
+
+.chart-section.dimmed {
+  opacity: 0.3;
+  filter: blur(1px);
+  transform: scale(0.98);
+}
+
+.chart-label {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
+  user-select: none;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .cell {
+    font-size: 0.875rem;
+  }
+}
+
+.cell.clickable {
+  cursor: pointer;
+}
+
+.cell.clickable:hover {
+  background-color: #fafafa;
+}
+
+.cell.active {
+  background-color: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.cell.center {
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid #111;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .cell.center {
+    font-size: 1rem;
+  }
+}
+
+.instruction-text {
+  max-width: 20rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 3rem;
+  line-height: 1.6;
+}
+
+/* Animation for the detail view */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-enter {
+  animation: slideUpFade 0.5s ease forwards;
+}
