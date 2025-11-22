@@ -117,3 +117,11 @@ export const ohtaniChart: MandalaChartData = {
     },
   ],
 };
+
+export const emptyChart: MandalaChartData = {
+  center: "",
+  goals: Array(8).fill(null).map(() => ({
+    title: "",
+    items: Array(8).fill(""),
+  })),
+};

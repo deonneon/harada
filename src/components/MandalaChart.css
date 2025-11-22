@@ -158,3 +158,56 @@
 .animate-enter {
   animation: slideUpFade 0.5s ease forwards;
 }
+
+/* Input Styles */
+.cell-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  outline: none;
+}
+
+.cell-input:focus {
+  background-color: #f5f5f5;
+}
+
+.cell-input::placeholder {
+  color: #e0e0e0;
+  font-style: italic;
+}
+
+/* Toggle Switch */
+.mode-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.toggle-btn:hover {
+  color: #333;
+}
+
+.toggle-btn.active {
+  color: #111;
+  border-bottom-color: #111;
+}
