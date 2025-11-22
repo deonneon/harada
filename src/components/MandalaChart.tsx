@@ -244,35 +244,31 @@ export const MandalaChart = () => {
                     )}
                 </div>
             ) : (
-                <div className="full-grid-wrapper">
-                    {/* 
-                Grid Layout Mapping:
-                0 1 2
-                3 C 4
-                5 6 7
-            */}
-                    {renderSubGrid(currentData.goals[0].title, currentData.goals[0].items || [])}
-                    {renderSubGrid(currentData.goals[1].title, currentData.goals[1].items || [])}
-                    {renderSubGrid(currentData.goals[2].title, currentData.goals[2].items || [])}
+                <div className="full-grid-scroll-container">
+                    <div className="full-grid-wrapper">
+                        {renderSubGrid(currentData.goals[0].title, currentData.goals[0].items || [])}
+                        {renderSubGrid(currentData.goals[1].title, currentData.goals[1].items || [])}
+                        {renderSubGrid(currentData.goals[2].title, currentData.goals[2].items || [])}
 
-                    {renderSubGrid(currentData.goals[3].title, currentData.goals[3].items || [])}
-                    {/* Center Main Grid */}
-                    <div className="full-grid-subgrid">
-                        <Cell content={currentData.goals[0].title} />
-                        <Cell content={currentData.goals[1].title} />
-                        <Cell content={currentData.goals[2].title} />
-                        <Cell content={currentData.goals[3].title} />
-                        <Cell content={currentData.center} isCenter={true} isActive={true} />
-                        <Cell content={currentData.goals[4].title} />
-                        <Cell content={currentData.goals[5].title} />
-                        <Cell content={currentData.goals[6].title} />
-                        <Cell content={currentData.goals[7].title} />
+                        {renderSubGrid(currentData.goals[3].title, currentData.goals[3].items || [])}
+                        {/* Center Main Grid */}
+                        <div className="full-grid-subgrid">
+                            <Cell content={currentData.goals[0].title} />
+                            <Cell content={currentData.goals[1].title} />
+                            <Cell content={currentData.goals[2].title} />
+                            <Cell content={currentData.goals[3].title} />
+                            <Cell content={currentData.center} isCenter={true} isActive={true} />
+                            <Cell content={currentData.goals[4].title} />
+                            <Cell content={currentData.goals[5].title} />
+                            <Cell content={currentData.goals[6].title} />
+                            <Cell content={currentData.goals[7].title} />
+                        </div>
+                        {renderSubGrid(currentData.goals[4].title, currentData.goals[4].items || [])}
+
+                        {renderSubGrid(currentData.goals[5].title, currentData.goals[5].items || [])}
+                        {renderSubGrid(currentData.goals[6].title, currentData.goals[6].items || [])}
+                        {renderSubGrid(currentData.goals[7].title, currentData.goals[7].items || [])}
                     </div>
-                    {renderSubGrid(currentData.goals[4].title, currentData.goals[4].items || [])}
-
-                    {renderSubGrid(currentData.goals[5].title, currentData.goals[5].items || [])}
-                    {renderSubGrid(currentData.goals[6].title, currentData.goals[6].items || [])}
-                    {renderSubGrid(currentData.goals[7].title, currentData.goals[7].items || [])}
                 </div>
             )}
 
@@ -290,8 +286,6 @@ export const MandalaChart = () => {
                     </button>
                 </div>
             </div>
-
-
         </div>
     );
 };

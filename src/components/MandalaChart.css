@@ -215,12 +215,20 @@
 }
 
 /* Full Grid View (9x9) */
+.full-grid-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem; /* Space for scrollbar */
+}
+
 .full-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   width: 100%;
   max-width: 80rem;
+  min-width: 600px; /* Ensure readable width on mobile */
   margin: 0 auto;
   padding: 1rem;
 }
